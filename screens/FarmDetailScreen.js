@@ -2,10 +2,12 @@ import React from 'react';
 import { View, ScrollView, Image, StyleSheet } from 'react-native';
 import { Text, Button, Card } from 'react-native-elements';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import { useNavigation } from '@react-navigation/native';
+
 
 const FarmDetailScreen = ({ route }) => {
   const { farmId } = route.params;
-
+  const navigation = useNavigation();
   // Fake data for farm details
   const farmDetails = {
     id: farmId,
@@ -91,7 +93,7 @@ const FarmDetailScreen = ({ route }) => {
         <Text>{`Max Leafy: ${service.maxLeafy}`}</Text>
         <Text>{`Max Root: ${service.maxRoot}`}</Text>
         <Text>{`Max Herb: ${service.maxHerb}`}</Text>
-        <Button title="Register" onPress={() => console.log('Register for Service')} />
+        <Button title="Register" onPress={() => navigation.navigate('RegisterScreen', {services: service})} />
       </Card>
     ));
   };
