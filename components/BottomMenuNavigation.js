@@ -2,8 +2,9 @@ import * as React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
 import HomeScreen from '../screens/HomeScreen';
+import HomePage from '../screens/HomePage';
 
-const MusicRoute = () => <HomeScreen/>
+const MusicRoute = () => <HomePage/>
 
 const AlbumsRoute = () => <Text>Albums</Text>;
 
