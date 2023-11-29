@@ -73,7 +73,7 @@ const HomePage = () => {
             </Card>
           ))}
         </ScrollView>
-        <Button onPress={() => console.log('View More Farm')}>
+        <Button onPress={() => navigation.navigate("FarmListScreen")}>
           Xem thêm farm
         </Button>
 
