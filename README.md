@@ -6,3 +6,6 @@ npm run
 ```
 npm install
 ```
+````
+npm i react-native-qrcode-scanner
+``
